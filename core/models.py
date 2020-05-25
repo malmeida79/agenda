@@ -19,5 +19,11 @@ class Evento(models.Model):
     def __str__(self):
         return self.titulo
 
+    # formatação de datas
     def get_data_evento(self):
         return self.data_evento.strftime('%d/%m/%Y %H:%M')
+
+    # formatação de datas para imput type data
+    def get_data_input_evento(self):
+        return self.data_evento.strftime('%Y-%m-%dT%H:%M')
+
